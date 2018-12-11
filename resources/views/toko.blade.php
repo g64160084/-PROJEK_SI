@@ -40,7 +40,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="index">Home
+              <a class="nav-link text-uppercase text-expanded" href="index">Beranda
                 <span class="sr-only">(current)</span>
               </a>
             </li>
@@ -50,9 +50,16 @@
             <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="products">Pesanan Saya</a>
             </li>
+            @guest
             <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="login">Masuk</a>
             </li>
+            @endguest
+            @auth
+            <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="profile">Profil</a>
+            </li>
+            @endauth
           </ul>
         </div>
       </div>
