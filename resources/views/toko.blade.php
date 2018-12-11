@@ -45,7 +45,7 @@
               </a>
             </li>
             <li class="nav-item active px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="about">Toko</a>
+              <a class="nav-link text-uppercase text-expanded" href="toko">Toko</a>
             </li>
             <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="products">Pesanan Saya</a>
