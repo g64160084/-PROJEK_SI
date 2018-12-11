@@ -122,6 +122,7 @@ p {
   .intro .intro-img {
     width: 75%;
     float: right;
+    position: right;
   }
   .intro .intro-text {
     left: 0;

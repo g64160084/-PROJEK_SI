@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Weply!</title>
+    <title>Online Tender</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,7 +27,7 @@
 
     <h1 class="site-heading text-center text-white d-none d-lg-block">
       <span class="site-heading-upper text-primary mb-3">A Good Food And Clothing For All Your Daily Needs</span>
-      <span class="site-heading-lower">Weply!</span>
+      <span class="site-heading-lower">Online Tender</span>
     </h1>
 
     <!-- Navigation -->
@@ -45,13 +45,13 @@
               </a>
             </li>
             <li class="nav-item active px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="about">Toko</a>
+              <a class="nav-link text-uppercase text-expanded" href="about">About</a>
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="products">Pesanan Saya</a>
+              <a class="nav-link text-uppercase text-expanded" href="products">Products</a>
             </li>
             <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="login">Masuk</a>
+            <a class="nav-link text-uppercase text-expanded" href="login">Login</a>
             </li>
           </ul>
         </div>
@@ -60,43 +60,17 @@
 
     <section class="page-section about-heading">
       <div class="container">
-       
+        <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/about.jpg" alt="">
         <div class="about-heading-content">
           <div class="row">
             <div class="col-xl-9 col-lg-10 mx-auto">
               <div class="bg-faded rounded p-5">
                 <h2 class="section-heading mb-4">
-                  <span class="section-heading-upper">Pakaian Untuk Hari Yang Sempurna!</span>
-                  <span class="section-heading-lower">Pakaian Untuk Anda</span>
+                  <span class="section-heading-upper">Better System, Easy To Use</span>
+                  <span class="section-heading-lower">About Us</span>
                 </h2>
-                <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/kaos.png" alt="">
-                 <p class="mb-0" style="align : center" font-size= 14 px"> KAOS TERBAIK</p>
-                <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/kemeja.png" alt="">
-                <p class="mb-0" style="align : center" font-size= 14 px"> KEMEJA TERBAIK</p>
-                <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/bomber.png" alt="">
-                <p class="mb-0" style="align : center" font-size= 14 px"> BOMBER TERBAIK</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="page-section about-heading">
-      <div class="container">
-       
-        <div class="about-heading-content">
-          <div class="row">
-            <div class="col-xl-9 col-lg-10 mx-auto">
-              <div class="bg-faded rounded p-5">
-                <h2 class="section-heading mb-4">
-                  <span class="section-heading-upper">Kesegaran Yang Selalu Terjamin!</span>
-                  <span class="section-heading-lower">Pangan Sehat Hidup Berkualitas</span>
-                </h2>
-                <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/makanan kecil.jpg" alt="">
-                <p class="mb-0" style="align : center" font-size= 14 px"> MAKANAN RINGAN</p>
-                 <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/makanan berat.jpg" alt="">
-                 <p class="mb-0" style="align : center" font-size= 14 px"> MAKANAN BERAT</p>
+                <p>Tender Online adalah sebuah website yang dibentuk oleh 4 orang mahasiswa sebagai jawaban atas permasalahan client yang membutuhkan sebuah sistem untuk memudahkan berbagai transaksi dalam bidang pengadaan. Website ini memudahkan client dalam sisi transaksi dan juga sistem tendernya yang dilakukan secara online. Informasi yang terdapat pada website ini mencakup produk yang akan ditenderkan seperti produk pakaian serta makanan. Produk tersebut nantinya akan ditenderkan kepada para konveksi maupun catering untuk menemukan harga yang sesuai bagi client. </p>
+                <p class="mb-0"> Untuk Informasi Seputar Website Dapat Menghubungi<br>No. Telepon : 085778844193<br>Line : @Teon<br>Instagram :  @Teonline<br>Facebook : Official Tender Online </p>
               </div>
             </div>
           </div>
@@ -106,7 +80,7 @@
 
     <footer class="footer text-faded text-center py-5">
       <div class="container">
-        <p class="m-0 small">Copyright &copy; Weply!.co.id 2018</p>
+        <p class="m-0 small">Copyright &copy; Teol.co.id 2018</p>
       </div>
     </footer>
 

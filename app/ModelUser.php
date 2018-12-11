@@ -1,5 +1,5 @@
 <?php
-namespace WePly;
+namespace App;
 use Illuminate\Database\Eloquent\Model;
 class ModelUser extends Model
 {

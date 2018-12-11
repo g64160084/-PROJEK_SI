@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Online Tender</title>
+    <title>Weply!</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +26,7 @@
 
     <h1 class="site-heading text-center text-white d-none d-lg-block">
       <span class="site-heading-upper text-primary mb-3">A Good Food And Clothing For All Your Daily Needs</span>
-      <span class="site-heading-lower">Online Tender</span>
+      <span class="site-heading-lower">Weply!</span>
     </h1>
 
     <!-- Navigation -->
@@ -39,26 +39,19 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item active px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="index">Home
+              <a class="nav-link text-uppercase text-expanded" href="index">Beranda
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="about">About</a>
+              <a class="nav-link text-uppercase text-expanded" href="about">Toko</a>
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="products">Products</a>
+              <a class="nav-link text-uppercase text-expanded" href="products">Pesanan Saya</a>
             </li>
-            @guest
             <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="login">Login</a>
+            <a class="nav-link text-uppercase text-expanded" href="login">Masuk</a>
             </li>
-            @endguest
-            @auth
-            <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="profile">Profile</a>
-            </li>
-            @endauth
           </ul>
         </div>
       </div>
@@ -71,36 +64,29 @@
           <div class="intro-text left-0 text-center bg-faded p-5 rounded">
             <h2 class="section-heading mb-4">
               <span class="section-heading-upper">Kualitas Tinggi</span>
-              <span class="section-heading-lower">DIBUAT SECARA TELITI</span>
+              <span class="section-heading-lower">Pakaian Untuk Hari Yang Sempurna</span>
             </h2>
-            <p class="mb-3">Seiap produk yang dihasilkan oleh kami dibuat oleh tangan-tangan profesional. Selain itu banyak pilihan produk mulai dari keperluan formal maupun non formal. 
+            <p class="mb-3">Kami menyediakan berbagai jenis pakaian untuk keperluan harian anda dan kolega anda. Setiap produk yang dihasilkan oleh kami dibuat oleh tangan-tangan profesional. Terdapat banyak pilihan produk mulai dari keperluan formal maupun non formal. 
             </p>
-            <div class="intro-button mx-auto">
-              <a class="btn btn-primary btn-xl" href="#">Visit Us Today!</a>
+                <div class="intro-button mx-auto">
+              <a class="btn btn-primary btn-xl" href="/Toko">Pesan Pakaian Anda Sekarang!</a>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <footer class="footer text-center px-lg-4">
       <div class="container">
-      </div>
-    </footer>
-
-    <section class="page-section clearfix">
-      <div class="container">
-        <div class="intro">
-          <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/food.jpg" alt="">
-          <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+        <div class="intro1">
+          <img class="intro1-img img-fluid mb-3 mb-lg-0 rounded" src="img/food.jpg" alt="">
+          <div class="intro1-text left-0 text-center bg-faded p-5 rounded">
             <h2 class="section-heading mb-4">
-              <span class="section-heading-upper">Kesegaran Yang Terjamin</span>
-              <span class="section-heading-lower">Dibuat Dengan Bahan - Bahan Yang Segar</span>
+              <span class="section-heading-upper">Kesegaran Yang Selalu Terjamin</span>
+              <span class="section-heading-lower">Pangan Sehat Hidup Berkualitas</span>
             </h2>
             <p class="mb-3">Produk yang kami buat terjamin kebersihan, rasa, dan kesegaran produk, sehingga produk yang diterima pelanggan merupakan produk kualitas tinggi.  
             </p>
-            <div class="intro-button mx-auto">
-              <a class="btn btn-primary btn-xl" href="#">Visit Us Today!</a>
+            <div class="intro1-button mx-auto">
+              <a class="btn btn-primary btn-xl" href="/Toko">Pesan Makanan Kualitas Terbaik!</a>
             </div>
           </div>
         </div>
@@ -109,7 +95,7 @@
 
     <footer class="footer text-faded text-center py-5">
       <div class="container">
-        <p class="m-0 small">Copyright &copy; Teol.co.id 2018</p>
+        <p class="m-0 small">Copyright &copy; Weply!.co.id 2018</p>
       </div>
     </footer>
 
