@@ -30,3 +30,7 @@ Auth::routes();
 Route::get('/about', 'AboutController@about');
 
 Route::get('/products', 'ProductsController@products');
+
+Route::get('/admin', 'AdminController@admin')    
+    ->middleware('is_admin')    
+    ->name('admin');
