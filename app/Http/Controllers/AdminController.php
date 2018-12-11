@@ -1,10 +1,10 @@
 <?php
 
-namespace WePly\Http\Controllers;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use WePly\User;
-use WePly\Http\Controllers\Controller;
+use App\User;
+use App\Http\Controllers\Controller;
 use Auth;
 use Illuminate\Support\Facades;
 
@@ -16,6 +16,6 @@ class AdminController extends Controller
     }
     public function admin()
     {
-        return view('index');
+        return view('admin');
     }
 }

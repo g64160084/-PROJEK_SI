@@ -1,5 +1,5 @@
 <?php
-namespace WePly\Http\Middleware;
+namespace App\Http\Middleware;
 use Closure;
 class IsAdmin
 {

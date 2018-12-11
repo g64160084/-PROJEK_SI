@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AboutController extends Controller
+class TokoController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -21,8 +21,8 @@ class AboutController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function about()
+    public function toko()
     {
-        return view('about');
+        return view('toko');
     }
 }

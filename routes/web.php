@@ -17,7 +17,6 @@ Route::get('/', function () {
 });
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/index', function () {
     return view('index');
@@ -25,8 +24,12 @@ Route::get('/index', function () {
 });
 Auth::routes();
 
-Route::get('/about', 'AboutController@about');
+Route::get('/toko', 'TokoController@toko');
 
 Route::get('/products', 'ProductsController@products');
 
-Route::get('/Toko', 'HomeController@Toko');
+Route::get('/admin', 'AdminController@admin')    
+    ->middleware('is_admin')    
+    ->name('admin');
+
+Route::get('/profile', 'ProfileController@profile')->name('profile');

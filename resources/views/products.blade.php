@@ -44,13 +44,21 @@
               </a>
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="about">Toko</a>
+              <a class="nav-link text-uppercase text-expanded" href="toko">Toko</a>
             </li>
             <li class="nav-item active px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="products">Pesanan Saya</a>
             </li>
+            @guest
             <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="login">Masuk</a>
+            </li>
+            @endguest
+            @auth
+            <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="profile">Profil</a>
+            </li>
+            @endauth
             </li>
           </ul>
         </div>
