@@ -45,21 +45,13 @@
               </a>
             </li>
             <li class="nav-item active px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="toko">Toko</a>
+              <a class="nav-link text-uppercase text-expanded" href="about">Toko</a>
             </li>
             <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="products">Pesanan Saya</a>
             </li>
-            @guest
             <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="login">Masuk</a>
-            </li>
-            @endguest
-            @auth
-            <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="profile">Profil</a>
-            </li>
-            @endauth
             </li>
           </ul>
         </div>
@@ -77,12 +69,18 @@
                   <span class="section-heading-upper">Pakaian Untuk Hari Yang Sempurna!</span>
                   <span class="section-heading-lower">Pakaian Untuk Anda</span>
                 </h2>
+                <a href="/products" class="mb-0" style="align : center" font-size= 14 px">
                 <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/kaos.png" alt="">
-                 <p class="mb-0" style="align : center" font-size= 14 px"> KAOS TERBAIK</p>
-                <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/kemeja.png" alt="">
-                <p class="mb-0" style="align : center" font-size= 14 px"> KEMEJA TERBAIK</p>
+                </a>
+                <p class="mb-0" style="align : center" font-size= 14 px"> KAOS</p>
+                <a href="/products" class="mb-0" style="align : center" font-size= 14 px">
                 <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/bomber.png" alt="">
-                <p class="mb-0" style="align : center" font-size= 14 px"> BOMBER TERBAIK</p>
+                </a>
+                <p class="mb-0" style="align : center" font-size= 14 px"> BOMBER</p>
+                <a href="/products" class="mb-0" style="align : center" font-size= 14 px">
+                <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/kemeja.png" alt="">
+                </a>
+                <p class="mb-0" style="align : center" font-size= 14 px"> KEMEJA</p>
               </div>
             </div>
           </div>
@@ -101,9 +99,13 @@
                   <span class="section-heading-upper">Kesegaran Yang Selalu Terjamin!</span>
                   <span class="section-heading-lower">Pangan Sehat Hidup Berkualitas</span>
                 </h2>
+                <a href="/products" class="mb-0" style="align : center" font-size= 14 px">
                 <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/makanan kecil.jpg" alt="">
+              </a>
                 <p class="mb-0" style="align : center" font-size= 14 px"> MAKANAN RINGAN</p>
+                 <a href="/products" class="mb-0" style="align : center" font-size= 14 px">
                  <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/makanan berat.jpg" alt="">
+               </a>
                  <p class="mb-0" style="align : center" font-size= 14 px"> MAKANAN BERAT</p>
               </div>
             </div>
