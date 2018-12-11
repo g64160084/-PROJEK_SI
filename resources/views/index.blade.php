@@ -49,9 +49,16 @@
             <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="products">Products</a>
             </li>
+            @guest
             <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="login">Login</a>
             </li>
+            @endguest
+            @auth
+            <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="profile">Profile</a>
+            </li>
+            @endauth
           </ul>
         </div>
       </div>

@@ -17,12 +17,14 @@ Route::get('/', function () {
 });
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/profile', 'ProfileController@profile')->name('profile');
 
-Route::get('/index', function () {
-    return view('index');
-    // return view('welcome');
-});
+Route::get('/index', 'IndexController@index')->name('home');
+
+// Route::get('/index', function () {
+//     return view('index');
+//     // return view('welcome');
+// });
 Auth::routes();
 
 Route::get('/about', 'AboutController@about');
