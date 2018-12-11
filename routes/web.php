@@ -33,3 +33,5 @@ Route::get('/admin', 'AdminController@admin')
     ->name('admin');
 
 Route::get('/profile', 'ProfileController@profile')->name('profile');
+
+Route::get('/konsumen', 'KonsumenController@konsumen')->name('konsumen');

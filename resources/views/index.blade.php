@@ -49,6 +49,9 @@
             <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="products">Pesanan Saya</a>
             </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="konsumen">Data Konsumen</a>
+            </li>
             @guest
             <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="login">Masuk</a>
@@ -77,7 +80,7 @@
             <p class="mb-3">Kami menyediakan berbagai jenis pakaian untuk keperluan harian anda dan kolega anda. Setiap produk yang dihasilkan oleh kami dibuat oleh tangan-tangan profesional. Terdapat banyak pilihan produk mulai dari keperluan formal maupun non formal. 
             </p>
                 <div class="intro-button mx-auto">
-              <a class="btn btn-primary btn-xl" href="/Toko">Pesan Pakaian Anda Sekarang!</a>
+              <a class="btn btn-primary btn-xl" href="toko">Pesan Pakaian Anda Sekarang!</a>
             </div>
           </div>
         </div>
@@ -94,7 +97,7 @@
             <p class="mb-3">Produk yang kami buat terjamin kebersihan, rasa, dan kesegaran produk, sehingga produk yang diterima pelanggan merupakan produk kualitas tinggi.  
             </p>
             <div class="intro1-button mx-auto">
-              <a class="btn btn-primary btn-xl" href="/Toko">Pesan Makanan Kualitas Terbaik!</a>
+              <a class="btn btn-primary btn-xl" href="toko">Pesan Makanan Kualitas Terbaik!</a>
             </div>
           </div>
         </div>
