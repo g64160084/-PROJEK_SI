@@ -49,9 +49,9 @@
             <li class="nav-item active px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="products">Pesanan Saya</a>
             </li>
-            <li class="nav-item px-lg-4">
+            <!-- <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="konsumen">Data Konsumen</a>
-            </li>
+            </li> -->
             @guest
             <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="login">Masuk</a>
@@ -68,49 +68,49 @@
       </div>
     </nav>
 
-<section class="page-section clearfix">
-      <form method="POST" action="konfirmasi">
+<!-- <section class="page-section clearfix">
+      <form method="POST" action={{route('products.store')}}>
           @csrf
 
           <input type="hidden" id="order_type" name="order_type" value="wedding">
 
           <div class="form-group row">
-              <label for="Nama" class="col-sm-4 col-form-label text-md-right">{{ __('Nama') }}</label>
+              <label for="Nama" class="col-sm-4 col-form-label text-md-right">{{ __('nama') }}</label>
 
               <div class="col-md-6">
-                  <input id="Nama" type="text" class="form-control{{ $errors->has('Nama') ? ' is-invalid' : '' }}" name="Nama" required autofocus>
+                  <input id="nama" type="text" class="form-control{{ $errors->has('nama') ? ' is-invalid' : '' }}" name="Nama" required autofocus>
 
-                  @if ($errors->has('Jenis Pakaian/Makanan'))
+                  @if ($errors->has('barang'))
                       <span class="invalid-feedback" role="alert">
-                          <strong>{{ $errors->first('Nama') }}</strong>
+                          <strong>{{ $errors->first('nama') }}</strong>
                       </span>
                   @endif
               </div>
           </div>
 
           <div class="form-group row">
-              <label for="Nomor Telepon" class="col-sm-4 col-form-label text-md-right">{{ __('Nomor Telepon') }}</label>
+              <label for="Nomor Telepon" class="col-sm-4 col-form-label text-md-right">{{ __('nohp') }}</label>
 
               <div class="col-md-6">
-                  <input id="Nomor Telepon" type="text" class="form-control{{ $errors->has('Nomor Telepon') ? ' is-invalid' : '' }}" name="Nomor Telepon" required autofocus>
+                  <input id="nohp" type="text" class="form-control{{ $errors->has('nohp') ? ' is-invalid' : '' }}" name="Nomor Telepon" required autofocus>
 
-                  @if ($errors->has('Jenis Pakaian/Makanan'))
+                  @if ($errors->has('barang'))
                       <span class="invalid-feedback" role="alert">
-                          <strong>{{ $errors->first('Nomor Telepon') }}</strong>
+                          <strong>{{ $errors->first('nohp') }}</strong>
                       </span>
                   @endif
               </div>
           </div>
 
           <div class="form-group row">
-              <label for="Jenis Pakaian/Makanan" class="col-sm-4 col-form-label text-md-right">{{ __('Jenis Pakaian/Makanan') }}</label>
+              <label for="Jenis Pakaian/Makanan" class="col-sm-4 col-form-label text-md-right">{{ __('barang') }}</label>
 
               <div class="col-md-6">
-                  <input id="Jenis Pakaian/Makanan" type="text" class="form-control{{ $errors->has('Jenis Pakaian/Makanan') ? ' is-invalid' : '' }}" name="Jenis Pakaian/Makanan" required autofocus>
+                  <input id="barang" type="text" class="form-control{{ $errors->has('barang') ? ' is-invalid' : '' }}" name="Jenis Pakaian/Makanan" required autofocus>
 
-                  @if ($errors->has('Jenis Pakaian/Makanan'))
+                  @if ($errors->has('barang'))
                       <span class="invalid-feedback" role="alert">
-                          <strong>{{ $errors->first('Jenis Pakaian/Makanan') }}</strong>
+                          <strong>{{ $errors->first('barang') }}</strong>
                       </span>
                   @endif
               </div>
@@ -119,11 +119,11 @@
               <label for="Jumlah Pesanan" class="col-sm-4 col-form-label text-md-right">{{ __('Jumlah Pesanan') }}</label>
 
               <div class="col-md-6">
-                  <input id="Jumlah Pesanan" type="text" class="form-control{{ $errors->has('Jumlah Pesanan') ? ' is-invalid' : '' }}" name="Jumlah Pesanan" required autofocus>
+                  <input id="jumlah" type="text" class="form-control{{ $errors->has('jumlah') ? ' is-invalid' : '' }}" name="Jumlah Pesanan" required autofocus>
 
-                  @if ($errors->has('Jumlah Pesanan'))
+                  @if ($errors->has('jumlah'))
                       <span class="invalid-feedback" role="alert">
-                          <strong>{{ $errors->first('Jumlah Pesanan') }}</strong>
+                          <strong>{{ $errors->first('jumlah') }}</strong>
                       </span>
                   @endif
               </div>
@@ -140,7 +140,48 @@
           </div>
       </form>
     </section>
+ -->
 
+<!--  INI UNTUK TABEL PEMESANAN -->
+
+
+<div id="main-content">
+<div class="wrapper">
+    <h2 class="judul">POST YOUR ITEM</h2>
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+    <form name="myForm" class="" action={{route('products.store')}} method="post" enctype="multipart/form-data">
+        {{ csrf_field() }}
+        <div  class="title-box form-group has-feedback{{ $errors->has('title') ? ' has-error' : '' }}">
+            <label for="">Nama</label>
+            <input type="text" id="title" class="" name="nama" placeholder="Input name" value="{{ old('nama')}}" required>
+        </div>
+        <div class="price-box">
+            <label for="location">No HP</label>
+            <input type="number" id="phone" name="nohp" placeholder="Masukan No HP" step="1000" value="{{old('nohp')}}" required>
+        </div>
+        <div class="stock-box">
+                <label for="stock">Barang</label>
+                <input type="text" id="goods" class="" name="barang" placeholder="Input goods" value="{{old('barang')}}" required>
+            </div>
+        <div class="unit-box">
+                <label for="">Jumlah</label>
+                <input type="number" id="units" name="jumlah" value="1" min="0" max="1000" value="{{old('jumlah')}}" required>
+            </div>
+            <input type="submit" value="Submit">
+    </form>
+</div>
+</div>
+
+
+<!-- SAMPE SINI TABELNYA -->
 
     <footer class="footer text-faded text-center py-5">
       <div class="container">

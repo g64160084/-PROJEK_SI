@@ -27,6 +27,7 @@ Auth::routes();
 Route::get('/toko', 'TokoController@toko');
 
 Route::get('/products', 'ProductsController@products');
+Route::post('/products/store', 'ProductsController@store')->name('products.store');
 
 Route::get('/admin', 'AdminController@admin')    
     ->middleware('is_admin')    
@@ -35,3 +36,4 @@ Route::get('/admin', 'AdminController@admin')
 Route::get('/profile', 'ProfileController@profile')->name('profile');
 
 Route::get('/konsumen', 'KonsumenController@konsumen')->name('konsumen');
+

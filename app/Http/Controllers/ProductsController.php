@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Konsumen;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -15,6 +16,11 @@ class ProductsController extends Controller
     // {
     //     $this->middleware('auth');
     // }
+    public function index()
+    {
+        $posts = Konsumen::latest() -> paginate(20);
+        return view('products', compact('posts'));
+    }
 
     /**
      * Show the application dashboard.
@@ -24,6 +30,28 @@ class ProductsController extends Controller
     public function products()
     {
         return view('products');
+    }
+
+    public function store(Request $request)
+    {
+        //
+        $this ->validate(request(), [
+            'nama' => 'required',
+            'nohp' => 'required',
+            'barang' => 'required',
+            'jumlah' => 'required',
+        ]);
+        
+        Konsumen::create([
+            'name' => request('nama'),
+            'phone' => request('nohp'),
+            'goods' => request('barang'),
+            'units' => request('jumlah'),
+            'konsumen_id' => auth()->id(),
+        ]);
+
+        return redirect('/products')->with('success', 'Post Jualan telah berhasil ditambahkan');
+        
     }
 
     
