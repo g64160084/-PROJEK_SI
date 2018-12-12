@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     const ADMIN_TYPE = 'admin';
+    const BIDDER_TYPE = 'bidder';
     const DEFAULT_TYPE = 'default';
     use Notifiable;
 
@@ -31,6 +32,9 @@ class User extends Authenticatable
     ];
     public function isAdmin()    {        
     return $this->type === self::ADMIN_TYPE; 
+    }
+    public function isBidder()    {        
+    return $this->type === self::BIDDER_TYPE;    
     }
     
 }
