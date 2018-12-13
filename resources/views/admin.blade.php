@@ -29,7 +29,7 @@
 
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-      <a class="navbar-brand mr-1" href="index">WePly Admin</a>
+      <a class="navbar-brand mr-1" href="admin">WePly Admin</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
@@ -93,7 +93,7 @@
       <!-- Sidebar -->
       <ul class="sidebar navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="index">
+          <a class="nav-link" href="admin">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span>
           </a>
@@ -105,8 +105,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <h6 class="dropdown-header">Login Screens:</h6>
-            <a class="dropdown-item" href="login">Login</a>
-            <a class="dropdown-item" href="register">Register</a>
+            <a class="dropdown-item" href="index">Home</a>
             <!-- <a class="dropdown-item" href="forgot-password.html">Forgot Password</a> -->
             <div class="dropdown-divider"></div>
            <!--  <h6 class="dropdown-header">Other Pages:</h6>

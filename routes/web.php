@@ -17,6 +17,11 @@ Route::get('/', function () {
 });
 Auth::routes();
 
+Route::get('/home', function () {
+    return view('index');
+    // return view('welcome');
+});
+Auth::routes();
 
 Route::get('/index', function () {
     return view('index');
