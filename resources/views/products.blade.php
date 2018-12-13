@@ -183,8 +183,8 @@
             <input type="text" id="title" class="form-control" name="nama" placeholder="Input name" value="{{ old('nama')}}" required>
         </div>
         <div class="price-box">
-            <label for="location">No HP</label>
-            <input type="number" id="phone" class="form-control" name="nohp" placeholder="Masukan No HP" step="1000" value="{{old('nohp')}}" required>
+            <label for="location">No HP (+62)</label>
+            <input type="number" id="phone" class="form-control" name="nohp" placeholder="Masukan No HP" value="{{old('nohp')}}" required>
         </div>
         <div class="stock-box">
                 <label for="stock">Jenis Barang</label>

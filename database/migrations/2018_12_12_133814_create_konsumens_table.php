@@ -17,7 +17,7 @@ class CreateKonsumensTable extends Migration
             $table->increments('id');
             $table->integer('konsumen_id')->unsigned();
             $table->string('name');
-            $table->integer('phone');
+            $table->bigInteger('phone');
             $table->string('goods');
             $table->integer('units');
             $table->timestamps();
