@@ -81,14 +81,13 @@
       <div class="card mb-3">
             <div class="card-header">
               <i class="fas fa-table"></i>
-              Data Table Example</div>
+              Data Konsumen</div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" align="center">
                   <thead>
                    
                    <tr>
-                      <th>ID Konsumen</th>
                       <th>Nama</th>
                       <th>No HP</th>
                       <th>Barang Pesanan</th>
@@ -97,7 +96,6 @@
                   </thead>
                   <tfoot>
                     <tr>
-                      <th>ID Konsumen</th>
                       <th>Nama</th>
                       <th>No HP</th>
                       <th>Barang Pesanan</th>
@@ -108,7 +106,6 @@
                   <tbody>
                   @foreach($products as $post)
                     <tr>
-                      <td>{{$post->konsumen_id}}</td>
                       <td>{{$post->name}}</td>
                       <td>{{$post->phone}}</td>
                       <td>{{$post->goods}}</td>
@@ -120,7 +117,6 @@
                 </table>
               </div>
             </div>
-            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
           </div>
 
         </div>

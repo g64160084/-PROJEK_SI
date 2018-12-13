@@ -220,7 +220,7 @@
           <div class="card mb-3">
             <div class="card-header">
               <i class="fas fa-table"></i>
-              Data Table Example</div>
+              Data Konsumen</div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -257,7 +257,7 @@
                       <td><form class="" action="{{ route('admin.destroy', $post) }}" method="post">
                         {{ csrf_field() }}
                         {{ method_field('DELETE')}}
-                      <button class="btn btn-secondary btn-sm btn-danger float-right">Hapus</button>
+                      <button class="btn btn-secondary btn-sm btn-danger float-center">Hapus</button>
                       </form></td>
                       @endif
                     </tr>
@@ -267,7 +267,7 @@
                 </table>
               </div>
             </div>
-            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            <!-- <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div> -->
           </div>
 
         </div>

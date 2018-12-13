@@ -166,7 +166,7 @@
 <div id="main-content">
 <div class="wrapper">
     <h2 class="judul">Order Sekarang!</h2>
-    <h3 class="judul">Silahkan masukan data jenis dan jumlah barang yang diinginkan</h3>
+    <h4 class="judul">Silahkan masukan data jenis dan jumlah barang yang diinginkan</h3>
     @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -180,21 +180,22 @@
         {{ csrf_field() }}
         <div  class="title-box form-group has-feedback{{ $errors->has('title') ? ' has-error' : '' }}">
             <label for="">Nama</label>
-            <input type="text" id="title" class="" name="nama" placeholder="Input name" value="{{ old('nama')}}" required>
+            <input type="text" id="title" class="form-control" name="nama" placeholder="Input name" value="{{ old('nama')}}" required>
         </div>
         <div class="price-box">
             <label for="location">No HP</label>
-            <input type="number" id="phone" name="nohp" placeholder="Masukan No HP" step="1000" value="{{old('nohp')}}" required>
+            <input type="number" id="phone" class="form-control" name="nohp" placeholder="Masukan No HP" step="1000" value="{{old('nohp')}}" required>
         </div>
         <div class="stock-box">
-                <label for="stock">Barang</label>
-                <input type="text" id="goods" class="" name="barang" placeholder="Input goods" value="{{old('barang')}}" required>
+                <label for="stock">Jenis Barang</label>
+                <input type="text" id="goods" class="form-control" name="barang" placeholder="Input goods" value="{{old('barang')}}" required>
             </div>
         <div class="unit-box">
                 <label for="">Jumlah</label>
-                <input type="number" id="units" name="jumlah" value="1" min="0" max="1000" value="{{old('jumlah')}}" required>
+                <input type="number" id="units" class="form-control" name="jumlah" value="1" min="0" max="1000" value="{{old('jumlah')}}" required>
             </div>
-            <input type="submit" value="Submit">
+            <br>
+            <input type="submit" class="btn btn-primary" value="Submit">
     </form>
 </div>
 </div>
