@@ -52,17 +52,6 @@
             <!-- <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="konsumen">Data Konsumen</a>
             </li> -->
-            @auth
-            @if(Auth::user()->type === "admin")
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="konsumen">Data Konsumen</a>
-            </li>
-            @elseif(Auth::user()->type === "bidder")
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="konsumen">Data Konsumen</a>
-            </li>
-            @endif
-            @endauth
             @guest
             <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="login">Masuk</a>
@@ -155,10 +144,16 @@
 
 <!--  INI UNTUK TABEL PEMESANAN -->
 
-
+<section class="page section about2-heading">
+<div class="container">  
+   <div class="about2-heading-content">
+          <div class="row">
+            <div class="col-xl-9 col-lg-10 mx-auto">
+              <div class="bg-faded rounded p-5">
 <div id="main-content">
 <div class="wrapper">
-    <h2 class="judul">POST YOUR ITEM</h2>
+    <h2 class="judul">Order Sekarang!</h2>
+    <h3 class="judul">Silahkan masukan data jenis dan jumlah barang yang diinginkan</h3>
     @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -190,6 +185,12 @@
     </form>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
 
 
 <!-- SAMPE SINI TABELNYA -->

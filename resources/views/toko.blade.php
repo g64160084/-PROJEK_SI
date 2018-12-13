@@ -53,17 +53,6 @@
             <!-- <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="konsumen">Data Konsumen</a>
             </li> -->
-            @auth
-            @if(Auth::user()->type === "admin")
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="konsumen">Data Konsumen</a>
-            </li>
-            @elseif(Auth::user()->type === "bidder")
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="konsumen">Data Konsumen</a>
-            </li>
-            @endif
-            @endauth
             @guest
             <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="login">Masuk</a>
@@ -88,20 +77,17 @@
               <div class="bg-faded rounded p-5">
                 <h2 class="section-heading mb-4">
                   <span class="upper">Pakaian Untuk Hari Yang Sempurna!</span>
-                  <span class="lower">Pakaian Untuk Anda</span>
-                </h2>
+                  <span class="lower" style="margin-bottom: 5rem">Pakaian Untuk Anda</span>
                 <a href="/products" class="mb-0" style="align : center" font-size= 14 px">
-                <img class="rounded about-heading-img1 mb-3 mb-3-lg-0" src="img/kaos.png" alt="">
+                <img class="box rounded about-heading-img1 mb-3 mb-3-lg-0" src="img/kaos.png" alt="">
                 </a>
-                <p class="mb-0" style="align : center" font-size= 14 px"> KAOS</p>
                 <a href="/products" class="mb-0" style="align : center" font-size= 14 px">
-                <img class="rounded about-heading-img1 mb-3 mb-lg-0" src="img/bomber.png" alt="">
+                <img class="box rounded about-heading-img1 mb-3 mb-lg-0" src="img/bomber.png" alt="">
                 </a>
-                <p class="mb-0" style="align : center" font-size= 14 px"> BOMBER</p>
+                <h2></h2>
                 <a href="/products" class="mb-0" style="align : center" font-size= 14 px">
-                <img class="rounded about-heading-img1 mb-3 mb-lg-0" src="img/kemeja.png" alt="">
+                <img class="box rounded about-heading-img1 mb-3 mb-lg-0" src="img/kemeja.png" alt="">
                 </a>
-                <p class="mb-0" style="align : center" font-size= 20 px"> KEMEJA</p>
               </div>
             </div>
           </div>
@@ -123,17 +109,18 @@
             <div class="col-xl-9 col-lg-10 mx-auto">
               <div class="bg-faded rounded p-5">
                 <h2 class="section-heading mb-4">
-                  <span class="section-heading-upper">Kesegaran Yang Selalu Terjamin!</span>
-                  <span class="section-heading-lower">Pangan Sehat Hidup Berkualitas</span>
+                  <span class="upper">Kesegaran Yang Selalu Terjamin!</span>
+                  <span class="lower">Pangan Sehat Hidup Berkualitas</span>
                 </h2>
                 <a href="/products" class="mb-0" style="align : center" font-size= 14 px">
-                <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/makanan kecil.jpg" alt="">
+                <img class="box img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/makanan kecil.jpg" alt="">
               </a>
-                <p class="mb-0" style="align : center" font-size= 14 px"> MAKANAN RINGAN</p>
+              <h1></h1>
+              <h2></h2>
                  <a href="/products" class="mb-0" style="align : center" font-size= 14 px">
-                 <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/makanan berat.jpg" alt="">
+                 <img class="box img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/makanan berat.jpg" alt="">
                </a>
-                 <p class="mb-0" style="align : center" font-size= 14 px"> MAKANAN BERAT</p>
+
               </div>
             </div>
           </div>
