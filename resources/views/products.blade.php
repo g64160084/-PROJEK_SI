@@ -52,6 +52,17 @@
             <!-- <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="konsumen">Data Konsumen</a>
             </li> -->
+            @auth
+            @if(Auth::user()->type === "admin")
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="konsumen">Data Konsumen</a>
+            </li>
+            @elseif(Auth::user()->type === "bidder")
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="konsumen">Data Konsumen</a>
+            </li>
+            @endif
+            @endauth
             @guest
             <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="login">Masuk</a>

@@ -29,9 +29,10 @@ Route::get('/toko', 'TokoController@toko');
 Route::get('/products', 'ProductsController@products');
 Route::post('/products/store', 'ProductsController@store')->name('products.store');
 
-Route::get('/admin', 'AdminController@admin')    
+Route::get('/admin', 'AdminController@admin') 
     ->middleware('is_admin')    
     ->name('admin');
+Route::delete('/admin/{post}/destroy', 'AdminController@destroy')->name('admin.destroy');
 
 
 Route::get('/konsumen', 'KonsumenController@konsumen') 

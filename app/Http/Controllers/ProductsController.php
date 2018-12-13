@@ -58,5 +58,13 @@ class ProductsController extends Controller
         
     }
 
+    public function destroy(Konsumen $post)
+    {
+        //
+        $post->delete();
+
+        return redirect()->route('fjb')->withDanger('Your post has been successfully lost from existence');
+    }
+
     
 }

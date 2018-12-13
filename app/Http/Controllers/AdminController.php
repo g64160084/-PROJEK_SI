@@ -20,4 +20,12 @@ class AdminController extends Controller
     	$products = Konsumen::latest()->paginate(5);
         return view('admin', compact('products'));
     }
+
+    public function destroy(Konsumen $post)
+    {
+        //
+        $post->delete();
+
+        return redirect()->route('admin')->withDanger('Your post has been successfully lost from existence');
+    }
 }

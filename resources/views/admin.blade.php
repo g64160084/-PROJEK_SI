@@ -232,6 +232,7 @@
                       <th>No HP</th>
                       <th>Barang Pesanan</th>
                       <th>Jumlah</th>
+                      <th>Tindakan</th>
                     </tr>
                   </thead>
                   <tfoot>
@@ -241,6 +242,7 @@
                       <th>No HP</th>
                       <th>Barang Pesanan</th>
                       <th>Jumlah</th>
+                      <th>Tindakan<th>
                     </tr>
                   </tfoot>
                   
@@ -252,6 +254,13 @@
                       <td>{{$post->phone}}</td>
                       <td>{{$post->goods}}</td>
                       <td>{{$post->units}}</td>
+                      @if(Auth::user()->type === "admin")
+                      <td><form class="" action="{{ route('admin.destroy', $post) }}" method="post">
+                        {{ csrf_field() }}
+                        {{ method_field('DELETE')}}
+                      <button class="btn btn-secondary btn-sm btn-danger float-right">Hapus</button>
+                      </form></td>
+                      @endif
                     </tr>
                   @endforeach
                   </tbody>
