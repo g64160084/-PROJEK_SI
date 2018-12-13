@@ -20,6 +20,7 @@
     <!-- Custom styles for this template -->
     <link href="css/business-casual.min.css" rel="stylesheet">
 
+
   </head>
 
   <body>
@@ -29,6 +30,7 @@
       <span class="site-heading-lower">Weply!</span>
     </h1>
 
+    
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
       <div class="container">
@@ -52,6 +54,17 @@
             <!-- <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="konsumen">Data Konsumen</a>
             </li> -->
+            @auth
+            @if(Auth::user()->type === "admin")
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="konsumen">Data Konsumen</a>
+            </li>
+            @elseif(Auth::user()->type === "bidder")
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="konsumen">Data Konsumen</a>
+            </li>
+            @endif
+            @endauth
             @guest
             <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="login">Masuk</a>
@@ -67,7 +80,7 @@
         </div>
       </div>
     </nav>
-
+    
 <!-- <section class="page-section clearfix">
       <form method="POST" action={{route('products.store')}}>
           @csrf

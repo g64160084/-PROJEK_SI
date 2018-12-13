@@ -19,6 +19,8 @@
 
     <!-- Custom styles for this template -->
     <link href="css/business-casual.min.css" rel="stylesheet">
+    <link href="css/sb-admin.css" rel="stylesheet">
+    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
   </head>
 
@@ -44,7 +46,7 @@
               </a>
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="about">Toko</a>
+              <a class="nav-link text-uppercase text-expanded" href="toko">Toko</a>
             </li>
             <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="products">Pesanan Saya</a>
@@ -67,15 +69,22 @@
       </div>
     </nav>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+
+    <!-- INI UNTUK TABLE -->
+    <section class="page section about2-heading">
+<div class="container">  
+   <div class="about2-heading-content">
+          <div class="row">
+            <div class="col-xl-9 col-lg-10 mx-auto">
+              <div class="bg-faded rounded p-5">
+
       <div class="card mb-3">
             <div class="card-header">
               <i class="fas fa-table"></i>
               Data Table Example</div>
             <div class="card-body">
               <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" align="center">
                   <thead>
                    
                    <tr>
@@ -115,8 +124,11 @@
           </div>
 
         </div>
-    </nav>
-
+      </div>
+    </div>
+  </div>
+</div>
+</section>
 
 
     <footer class="footer text-faded text-center py-5">
