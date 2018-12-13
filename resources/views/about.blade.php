@@ -40,29 +40,19 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="index">Beranda
+              <a class="nav-link text-uppercase text-expanded" href="index">Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item active px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="toko">Toko</a>
+              <a class="nav-link text-uppercase text-expanded" href="about">Toko</a>
             </li>
             <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="products">Pesanan Saya</a>
             </li>
-            <!-- <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="konsumen">Data Konsumen</a>
-            </li> -->
-            @guest
             <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="login">Masuk</a>
             </li>
-            @endguest
-            @auth
-            <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="profile">Profil</a>
-            </li>
-            @endauth
           </ul>
         </div>
       </div>
@@ -70,27 +60,43 @@
 
     <section class="page-section about-heading">
       <div class="container">
-
+       
         <div class="about-heading-content">
           <div class="row">
             <div class="col-xl-9 col-lg-10 mx-auto">
               <div class="bg-faded rounded p-5">
                 <h2 class="section-heading mb-4">
-                  <span class="upper">Pakaian Untuk Hari Yang Sempurna!</span>
-                  <span class="lower">Pakaian Untuk Anda</span>
+                  <span class="section-heading-upper">Pakaian Untuk Hari Yang Sempurna!</span>
+                  <span class="section-heading-lower">Pakaian Untuk Anda</span>
                 </h2>
-                <a href="/products" class="mb-0" style="align : center" font-size= 14 px">
-                <img class="rounded about-heading-img1 mb-3 mb-3-lg-0" src="img/kaos.png" alt="">
-                </a>
-                <p class="mb-0" style="align : center" font-size= 14 px"> KAOS</p>
-                <a href="/products" class="mb-0" style="align : center" font-size= 14 px">
-                <img class="rounded about-heading-img1 mb-3 mb-lg-0" src="img/bomber.png" alt="">
-                </a>
-                <p class="mb-0" style="align : center" font-size= 14 px"> BOMBER</p>
-                <a href="/products" class="mb-0" style="align : center" font-size= 14 px">
-                <img class="rounded about-heading-img1 mb-3 mb-lg-0" src="img/kemeja.png" alt="">
-                </a>
-                <p class="mb-0" style="align : center" font-size= 20 px"> KEMEJA</p>
+                <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/kaos.png" alt="">
+                 <p class="mb-0" style="align : center" font-size= 14 px"> KAOS TERBAIK</p>
+                <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/kemeja.png" alt="">
+                <p class="mb-0" style="align : center" font-size= 14 px"> KEMEJA TERBAIK</p>
+                <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/bomber.png" alt="">
+                <p class="mb-0" style="align : center" font-size= 14 px"> BOMBER TERBAIK</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section about-heading">
+      <div class="container">
+       
+        <div class="about-heading-content">
+          <div class="row">
+            <div class="col-xl-9 col-lg-10 mx-auto">
+              <div class="bg-faded rounded p-5">
+                <h2 class="section-heading mb-4">
+                  <span class="section-heading-upper">Kesegaran Yang Selalu Terjamin!</span>
+                  <span class="section-heading-lower">Pangan Sehat Hidup Berkualitas</span>
+                </h2>
+                <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/makanan kecil.jpg" alt="">
+                <p class="mb-0" style="align : center" font-size= 14 px"> MAKANAN RINGAN</p>
+                 <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/makanan berat.jpg" alt="">
+                 <p class="mb-0" style="align : center" font-size= 14 px"> MAKANAN BERAT</p>
               </div>
             </div>
           </div>
@@ -103,34 +109,6 @@
         <p class="m-0 small">Copyright &copy; Weply!.co.id 2018</p>
       </div>
     </footer>
-
-    <section class="page-section about1-heading">
-      <div class="container">
-       
-        <div class="about1-heading-content">
-          <div class="row">
-            <div class="col-xl-9 col-lg-10 mx-auto">
-              <div class="bg-faded rounded p-5">
-                <h2 class="section-heading mb-4">
-                  <span class="section-heading-upper">Kesegaran Yang Selalu Terjamin!</span>
-                  <span class="section-heading-lower">Pangan Sehat Hidup Berkualitas</span>
-                </h2>
-                <a href="/products" class="mb-0" style="align : center" font-size= 14 px">
-                <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/makanan kecil.jpg" alt="">
-              </a>
-                <p class="mb-0" style="align : center" font-size= 14 px"> MAKANAN RINGAN</p>
-                 <a href="/products" class="mb-0" style="align : center" font-size= 14 px">
-                 <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/makanan berat.jpg" alt="">
-               </a>
-                 <p class="mb-0" style="align : center" font-size= 14 px"> MAKANAN BERAT</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
