@@ -15,6 +15,9 @@ class IsBidder
         if(auth()->user()->isBidder()) {
             return $next($request);
         }
+        else if(auth()->user()->isAdmin()) {
+            return $next($request);
+        }
         return redirect('index');
     	
     }

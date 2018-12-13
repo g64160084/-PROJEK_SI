@@ -35,9 +35,7 @@ Route::get('/admin', 'AdminController@admin')
 Route::delete('/admin/{post}/destroy', 'AdminController@destroy')->name('admin.destroy');
 
 
-Route::get('/konsumen', 'KonsumenController@konsumen') 
-	->middleware('bidmin')     
-    ->name('bidmin');
+Route::get('/konsumen', 'KonsumenController@konsumen') ->middleware('is_bidder');
 
 
 Route::get('/profile', 'ProfileController@profile')->name('profile');

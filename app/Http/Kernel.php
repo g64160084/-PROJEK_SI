@@ -44,7 +44,7 @@ class Kernel extends HttpKernel
 
         'bidmin' => [
             \App\Http\Middleware\IsAdmin::class,
-            \App\Http\Middleware\IsAdmin::class,
+            \App\Http\Middleware\IsBidder::class,
         ],
     ];
 
