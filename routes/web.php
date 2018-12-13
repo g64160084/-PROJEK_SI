@@ -33,9 +33,10 @@ Route::get('/admin', 'AdminController@admin')
     ->middleware('is_admin')    
     ->name('admin');
 
+
 Route::get('/konsumen', 'KonsumenController@konsumen') 
-	->middleware('is_admin','is_bidder')      
-    ->name('admin','bidder');
+	->middleware('bidmin')     
+    ->name('bidmin');
 
 
 Route::get('/profile', 'ProfileController@profile')->name('profile');

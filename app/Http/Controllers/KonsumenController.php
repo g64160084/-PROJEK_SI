@@ -7,6 +7,7 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Auth;
 use Illuminate\Support\Facades;
+use App\Konsumen;
 
 class KonsumenController extends Controller
 {
@@ -17,7 +18,8 @@ class KonsumenController extends Controller
         }
         public function konsumen()
         {
-        return view('konsumen');
+        $products = Konsumen::latest()->paginate(5);
+        return view('konsumen', compact('products'));
         }
 
     

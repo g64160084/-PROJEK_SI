@@ -7,6 +7,7 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Auth;
 use Illuminate\Support\Facades;
+use App\Konsumen;
 
 class AdminController extends Controller
 {
@@ -16,6 +17,7 @@ class AdminController extends Controller
     }
     public function admin()
     {
-        return view('admin');
+    	$products = Konsumen::latest()->paginate(5);
+        return view('admin', compact('products'));
     }
 }

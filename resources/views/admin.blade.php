@@ -119,11 +119,11 @@
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Charts</span></a>
         </li> -->
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="tables.html">
             <i class="fas fa-fw fa-table"></i>
             <span>Tables</span></a>
-        </li>
+        </li> -->
       </ul>
 
       <div id="content-wrapper">
@@ -227,22 +227,20 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>Name</th>
-                      <th>Position</th>
-                      <th>Office</th>
-                      <th>Age</th>
-                      <th>Start date</th>
-                      <th>Salary</th>
+                      <th>ID Konsumen</th>
+                      <th>Nama</th>
+                      <th>No HP</th>
+                      <th>Barang Pesanan</th>
+                      <th>Jumlah</th>
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
-                      <th>Name</th>
-                      <th>Position</th>
-                      <th>Office</th>
-                      <th>Age</th>
-                      <th>Start date</th>
-                      <th>Salary</th>
+                      <th>ID Konsumen</th>
+                      <th>Nama</th>
+                      <th>No HP</th>
+                      <th>Barang Pesanan</th>
+                      <th>Jumlah</th>
                     </tr>
                   </tfoot>
                   
@@ -254,7 +252,6 @@
                       <td>{{$post->phone}}</td>
                       <td>{{$post->goods}}</td>
                       <td>{{$post->units}}</td>
-                      <td>$320,800</td>
                     </tr>
                   @endforeach
                   </tbody>

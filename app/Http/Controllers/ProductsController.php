@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Konsumen;
 use Illuminate\Http\Request;
+use App\User;
+use App\Http\Controllers\Controller;
+use Auth;
+use Illuminate\Support\Facades;
 
 class ProductsController extends Controller
 {
@@ -47,7 +51,7 @@ class ProductsController extends Controller
             'phone' => request('nohp'),
             'goods' => request('barang'),
             'units' => request('jumlah'),
-            'konsumen_id' => auth()->id(),
+            'konsumen_id' => \Auth::user()->id,
         ]);
 
         return redirect('/products')->with('success', 'Post Jualan telah berhasil ditambahkan');
