@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Konsumen;
+use App\Bidder;
 use Illuminate\Http\Request;
 use App\User;
 use App\Http\Controllers\Controller;
 use Auth;
 use Illuminate\Support\Facades;
 
-class ProductsController extends Controller
+class BidderController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -22,8 +22,8 @@ class ProductsController extends Controller
     // }
     public function index()
     {
-        $posts = Konsumen::latest() -> paginate(20);
-        return view('products', compact('posts'));
+        $posts = Bidder::latest() -> paginate(20);
+        return view('bidder', compact('posts'));
     }
 
     /**
@@ -31,9 +31,9 @@ class ProductsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function products()
+    public function bidder()
     {
-        return view('products');
+        return view('bidder');
     }
 
     public function store(Request $request)
@@ -41,19 +41,21 @@ class ProductsController extends Controller
         //
         $this ->validate(request(), [
             'nohp' => 'required|min:10',
+            'nama_konsumen' => 'required',
             'barang' => 'required',
-            'jumlah' => 'required',
+            'harga' => 'required',
         ]);
         
-        Konsumen::create([
+        Bidder::create([
             'name' => \Auth::user()->name,
             'phone' => request('nohp'),
+            'konsumen_name' => request('nama_konsumen'),
             'goods' => request('barang'),
-            'units' => request('jumlah'),
-            'konsumen_id' => \Auth::user()->id,
+            'price' => request('harga'),
+            'bidder_id' => \Auth::user()->id,
         ]);
 
-        return redirect('/products')->with('success', 'Post Jualan telah berhasil ditambahkan');
+        return redirect('/bidder')->with('success', 'Post Jualan telah berhasil ditambahkan');
         
     }
 

@@ -54,15 +54,30 @@
               <a class="nav-link text-uppercase text-expanded" href="konsumen">Data Konsumen</a>
             </li> -->
             @auth
+            <!-- IF UNTUK KONSUMEN -->
             @if(Auth::user()->type === "admin")
             <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="konsumen">Data Konsumen</a>
             </li>
+
             @elseif(Auth::user()->type === "bidder")
             <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="konsumen">Data Konsumen</a>
             </li>
             @endif
+            <!-- ENDIF UNTUK KONSUMEN -->
+            <!-- IF UNTUK LELANG -->
+            @if(Auth::user()->type === "admin")
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="bidder">Lelang</a>
+            </li>
+
+            @elseif(Auth::user()->type === "bidder")
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="bidder">Lelang</a>
+            </li>
+            @endif
+            <!-- ENDIF UNTUK LELANG -->
             @endauth
             @guest
             <li class="nav-item px-lg-4">

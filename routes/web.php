@@ -34,11 +34,22 @@ Route::get('/toko', 'TokoController@toko');
 Route::get('/products', 'ProductsController@products');
 Route::post('/products/store', 'ProductsController@store')->name('products.store');
 
+Route::get('/bidder', 'BidderController@bidder') ->middleware('is_bidder');
+Route::post('/bidder/store', 'BidderController@store')
+    ->middleware('is_bidder') 
+    ->name('bidder.store');
+
 Route::get('/admin', 'AdminController@admin') 
     ->middleware('is_admin')    
     ->name('admin');
-Route::delete('/admin/{post}/destroy', 'AdminController@destroy')->name('admin.destroy');
 
+Route::delete('/admin/{post}/destroyKonsumen', 'AdminController@destroyKonsumen')
+    ->middleware('is_admin')    
+    ->name('admin.destroyKonsumen');
+
+Route::delete('/admin/{post}/destroyBidder', 'AdminController@destroyBidder')
+    ->middleware('is_admin')    
+    ->name('admin.destroyBidder');
 
 Route::get('/konsumen', 'KonsumenController@konsumen') ->middleware('is_bidder');
 

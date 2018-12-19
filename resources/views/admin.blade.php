@@ -216,7 +216,7 @@
             <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
           </div> -->
 
-          <!-- DataTables Example -->
+          <!-- Data Konsumen-->
           <div class="card mb-3">
             <div class="card-header">
               <i class="fas fa-table"></i>
@@ -254,7 +254,7 @@
                       <td>{{$post->goods}}</td>
                       <td>{{$post->units}}</td>
                       @if(Auth::user()->type === "admin")
-                      <td><form class="" action="{{ route('admin.destroy', $post) }}" method="post">
+                      <td><form class="" action="{{ route('admin.destroyKonsumen', $post) }}" method="post">
                         {{ csrf_field() }}
                         {{ method_field('DELETE')}}
                       <button class="btn btn-secondary btn-sm btn-danger float-center">Hapus</button>
@@ -271,7 +271,67 @@
           </div>
 
         </div>
-        <!-- /.container-fluid -->
+        <!-- END DATA KONSUMEN -->
+
+        <!-- Data Bidder-->
+        <div class="card mb-3">
+            <div class="card-header">
+              <i class="fas fa-table"></i>
+              Data Bidder</div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>ID Bidder</th>
+                      <th>Nama</th>
+                      <th>No HP</th>
+                      <th>Nama Konsumen</th>
+                      <th>Barang Pesanan</th>
+                      <th>Harga</th>
+                      <th>Tindakan</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th>ID Bidder</th>
+                      <th>Nama</th>
+                      <th>No HP</th>
+                      <th>Nama Konsumen</th>
+                      <th>Barang Pesanan</th>
+                      <th>Harga</th>
+                      <th>Tindakan<th>
+                    </tr>
+                  </tfoot>
+                  
+                  <tbody>
+                  @foreach($bidder as $post)
+                    <tr>
+                      <td>{{$post->bidder_id}}</td>
+                      <td>{{$post->name}}</td>
+                      <td>{{$post->phone}}</td>
+                      <td>{{$post->konsumen_name}}</td>
+                      <td>{{$post->goods}}</td>
+                      <td>{{$post->price}}</td>
+                      @if(Auth::user()->type === "admin")
+                      <td><form class="" action="{{ route('admin.destroyBidder', $post) }}" method="post">
+                        {{ csrf_field() }}
+                        {{ method_field('DELETE')}}
+                      <button class="btn btn-secondary btn-sm btn-danger float-center">Hapus</button>
+                      </form></td>
+                      @endif
+                    </tr>
+                  @endforeach
+                  </tbody>
+
+                </table>
+              </div>
+            </div>
+            <!-- <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div> -->
+          </div>
+
+        </div>
+        <!-- END DATA Bidder -->
 
         <!-- Sticky Footer -->
         <footer class="sticky-footer">

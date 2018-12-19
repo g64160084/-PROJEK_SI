@@ -48,38 +48,26 @@
             <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="toko">Toko</a>
             </li>
-            <li class="nav-item active px-lg-4">
+            <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="products">Pesanan Saya</a>
             </li>
             <!-- <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="konsumen">Data Konsumen</a>
             </li> -->
             @auth
-            <!-- IF UNTUK KONSUMEN -->
             @if(Auth::user()->type === "admin")
             <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="konsumen">Data Konsumen</a>
             </li>
-
             @elseif(Auth::user()->type === "bidder")
             <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="konsumen">Data Konsumen</a>
             </li>
             @endif
-            <!-- ENDIF UNTUK KONSUMEN -->
-            <!-- IF UNTUK LELANG -->
-            @if(Auth::user()->type === "admin")
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="bidder">Lelang</a>
-            </li>
-
-            @elseif(Auth::user()->type === "bidder")
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="bidder">Lelang</a>
-            </li>
-            @endif
-            <!-- ENDIF UNTUK LELANG -->
             @endauth
+            <li class="nav-item active px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="bidder">Lelang</a>
+            </li>
             @guest
             <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="login">Masuk</a>
@@ -180,8 +168,8 @@
               <div class="bg-faded rounded p-5">
 <div id="main-content">
 <div class="wrapper">
-    <h2 class="judul">Order Sekarang!</h2>
-    <h4 class="judul">Silahkan masukan data jenis dan jumlah barang yang diinginkan</h3>
+    <h2 class="judul">Lelang Sekarang!</h2>
+    <h4 class="judul">Silahkan masukan data jenis dan jumlah barang yang ingin dilelang</h3>
     @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -191,7 +179,7 @@
         </ul>
     </div>
 @endif
-    <form name="myForm" class="" action={{route('products.store')}} method="post" enctype="multipart/form-data">
+    <form name="myForm" class="" action={{route('bidder.store')}} method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
         <div  class="title-box">
             <label for="">Nama</label>
@@ -201,13 +189,17 @@
             <label for="">No HP (+62)</label>
             <input type="number" id="phone" class="form-control" name="nohp" placeholder="Masukan No HP" value="{{old('nohp')}}" required>
         </div>
+        <div  class="konsumenname-box">
+            <label for="">Nama Konsumen</label>
+            <input type="text" id="konsumen_name" class="form-control" name="nama_konsumen" placeholder="Masukan Nama Konsumen yang Ingin Dilelang" value="{{old('nama_konsumen')}}" required>
+        </div>
         <div class="stock-box">
-                <label for="stock">Jenis Barang</label>
+                <label for="">Jenis Barang</label>
                 <input type="text" id="goods" class="form-control" name="barang" placeholder="Masukan Jenis Barang" value="{{old('barang')}}" required>
             </div>
         <div class="unit-box">
-                <label for="">Jumlah</label>
-                <input type="number" id="units" class="form-control" name="jumlah" value="1" min="0" max="1000" value="{{old('jumlah')}}" required>
+                <label for="">Harga (RP)</label>
+                <input type="number" id="units" class="form-control" name="harga" placeholder="Masukan Harga Tanpa Titik" value="{{old('harga')}}" required>
             </div>
             <br>
             <input type="submit" class="btn btn-primary" value="Submit">
