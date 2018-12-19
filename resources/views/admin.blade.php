@@ -107,6 +107,12 @@
           <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <h6 class="dropdown-header">Login Screens:</h6>
             <a class="dropdown-item" href="index">Home</a>
+            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+              {{ __('Logout') }}
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              @csrf
+            </form>
             <!-- <a class="dropdown-item" href="forgot-password.html">Forgot Password</a> -->
             <div class="dropdown-divider"></div>
            <!--  <h6 class="dropdown-header">Other Pages:</h6>
